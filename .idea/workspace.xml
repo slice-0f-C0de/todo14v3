@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e42fe5d7-ba4f-4725-b2cc-8b96bae3bbbb" name="Changes" comment="fetchTasksThunk">
+    <list default="true" id="e42fe5d7-ba4f-4725-b2cc-8b96bae3bbbb" name="Changes" comment="removeTaskTC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/tasks-reducer.ts" afterDir="false" />
@@ -86,7 +86,7 @@
       <workItem from="1681818788802" duration="1496000" />
       <workItem from="1708693366183" duration="11479000" />
       <workItem from="1708786524692" duration="26000" />
-      <workItem from="1708948262799" duration="5426000" />
+      <workItem from="1708948262799" duration="10266000" />
     </task>
     <task id="LOCAL-00001" summary="set-todolists">
       <created>1708950477931</created>
@@ -109,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708952982374</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="removeTaskTC">
+      <created>1708953931798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708953931798</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +137,7 @@
     <MESSAGE value="set-todolists" />
     <MESSAGE value="thunk, milddleware" />
     <MESSAGE value="fetchTasksThunk" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetchTasksThunk" />
+    <MESSAGE value="removeTaskTC" />
+    <option name="LAST_COMMIT_MESSAGE" value="removeTaskTC" />
   </component>
 </project>
