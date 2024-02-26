@@ -19,10 +19,12 @@ import {
     removeTodolistAC, setTodolistsAC,
     TodolistDomainType
 } from './state/todolists-reducer'
-import {addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC} from './state/tasks-reducer';
+import {addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, removeTaskTC} from './state/tasks-reducer';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppRootStateType} from './state/store';
 import {TaskStatuses, TaskType, todolistsAPI} from './api/todolists-api'
+import {ThunkDispatch} from "redux-thunk";
+import {AnyAction} from "redux";
 
 
 export type TasksStateType = {
@@ -34,7 +36,7 @@ function App() {
 
     const todolists = useSelector<AppRootStateType, Array<TodolistDomainType>>(state => state.todolists)
     const tasks = useSelector<AppRootStateType, TasksStateType>(state => state.tasks)
-    const dispatch = useDispatch();
+    const dispatch: ThunkDispatch<any, any, AnyAction> = useDispatch()
 
     useEffect(() => {
         todolistsAPI.getTodolists().then(res => {
@@ -43,10 +45,10 @@ function App() {
         })
     }, [])
 
-const removeTask = useCallback(function (id: string, todolistId: string) {
-    const action = removeTaskAC(id, todolistId);
-    dispatch(action);
-}, []);
+    const removeTask = useCallback(function (id: string, todolistId: string) {
+        const thunk = removeTaskTC(id, todolistId)
+        dispatch(thunk)
+    }, [])
 
 const addTask = useCallback(function (title: string, todolistId: string) {
     const action = addTaskAC(title, todolistId);
