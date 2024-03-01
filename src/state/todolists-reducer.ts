@@ -21,6 +21,7 @@ export type ChangeTodolistFilterActionType = {
     id: string
     filter: FilterValuesType
 }
+
 export type SetTodolistsActionType = {
     type: 'SET-TODOLISTS'
     todolists: Array<TodolistType>
